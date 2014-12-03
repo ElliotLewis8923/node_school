@@ -13,3 +13,23 @@ function repeat(operation, num) {
 }
 
 module.exports = repeat
+
+function doubleAll(numbers) {
+	return numbers.map(function(x) {
+		return x * 2
+	});
+}
+
+module.exports = doubleAll
+
+function getShortMessages(messages) {
+  return messages.map(function(x) {
+  		return x.message
+  }).filter(function(x) {
+  	return x.length < 50;
+  });
+}
+
+module.exports = getShortMessages
+
+
