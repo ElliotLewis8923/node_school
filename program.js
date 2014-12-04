@@ -43,3 +43,13 @@ function checkUsersValid(goodUsers) {
 }
 
 module.exports = checkUsersValid
+
+function countWords(inputWords) {
+	words = {};
+	inputWords.reduce(function(x, y) {
+		words[y] ? (words[y] += 1) : (words[y] = 1)
+	}, 0);
+	return words
+}
+
+module.exports = countWords
