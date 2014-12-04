@@ -53,3 +53,20 @@ function countWords(inputWords) {
 }
 
 module.exports = countWords
+
+function reduce(arr, fn, initial) {
+	var recurse = function(index) {
+		if (arr.length > 0) {
+			index = 1 || index + 1;
+			initial = fn(initial, arr[0], index, arr);
+			arr.shift();
+			return recurse(index); 
+		}
+		else { 
+			return initial; 
+		}	
+	}
+	return recurse();
+}
+
+module.exports = reduce
